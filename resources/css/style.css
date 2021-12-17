@@ -154,6 +154,8 @@ input{
     font-weight: 700;
     /* Aplicando margem superior de distância do botão ao form */
     margin-top: 2%;
+    /* Mudando o cursor para clicar */
+    cursor: pointer;
 }
   
 /* Configurando o hover do botão de calcular*/
@@ -285,9 +287,9 @@ form input:nth-child(1) {
   /* Aplicando a animação de movimento */
   animation-name: movendo;
   /* Tempo de execução da animação */
-  animation-duration: 500ms;
+  animation-duration: 600ms;
   /* Delay (atraso) no tempo para executar a animação */
-  animation-delay: 250 ms;
+  animation-delay: 1200 ms;
 }
 
 /* Controlando a animação no segundo input */  
@@ -295,23 +297,27 @@ form input:nth-child(2) {
   /* Aplicando a animação de movimento */
   animation-name: movendo;
   /* Tempo de execução da animação */
-  animation-duration: 500ms;
+  animation-duration: 600ms;
   /* Delay (atraso) no tempo para executar a animação */
-  animation-delay: 500 ms;
+  animation-delay: 1400 ms;
   /* O input só irá aparecer após o delay */
   animation-fill-mode: backwards;
 }
 
-/* Controlando a animação no segundo input */  
+/* Controlando a animação no terceiro input */  
 form input:nth-child(3) {
     /* Aplicando a animação de movimento */
     animation-name: movendo;
     /* Tempo de execução da animação */
-    animation-duration: 500ms;
+    animation-duration: 600ms;
     /* Delay (atraso) no tempo para executar a animação */
-    animation-delay: 750 ms;
+    animation-delay: 1600 ms;
     /* O input só irá aparecer após o delay */
     animation-fill-mode: backwards;
+}
+
+h1 {
+    animation: movendo 500ms 150ms backwards;
 }
 
 /* Criando animação: De movimento para cima com aparição suave */
@@ -332,13 +338,25 @@ form input:nth-child(3) {
     }
 }
 
+.calculadora {
+    /* Definindo o animation name, duration, delay em uma linha: */
+    animation: movendoCima 800ms 120ms;
+}
+
 .container-resultado {
   /* Aplicando a animação de movimento */
   animation-name: movendoCima;
   /* Tempo de execução da animação */
   animation-duration: 1000ms;
   /* Delay (atraso) no tempo para executar a animação */
-  animation-delay: 400 ms;
+  animation-delay: 400ms;
+  /* fill-mode: backwards: Para o conteiner só aperecer na tela após a execução da animação */
+  animation-fill-mode: backwards;
+}
+
+.seta-descer {
+    /* Definindo o animation name, duration, delay e fill-mode em uma linha: */
+    animation: movendoCima 500ms 200ms backwards;
 }
 
 /* Criando responsividade do site: Otimizando as tags para diferentes resoluções */
