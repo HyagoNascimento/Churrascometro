@@ -26,7 +26,8 @@ header {
     background-size: cover;
     position: static;
     overflow: hidden;
-    height: 50rem;
+    /* Tamanho do header */
+    height: 45rem;
 }
 
 /* Configurando a div contanier do texto e calculadora para flex: ficarem lado a lado  */
@@ -89,7 +90,7 @@ h3 {
     /* Definindo as dimensões da div login: Largura (width) e altura (height) da página. Largura (px) e a altura (px) da div dentro do login-container */ 
     width: 300px;
     height: 350px;
-    justify-content: right;
+    /* Aplicando distancia por margem na div da calculadora */
     margin: 5rem 0 0 5rem;
 }
 
@@ -133,7 +134,7 @@ input{
     width: 220px;
 }
   
-/* Configurando o botão de calculado */
+/* Configurando o botão de calcular */
 .btn_calcular {
     /* Definindo o tamanho do botão aplicando o padding: top (superior); right(direita) */
     padding: 10px 50px;
@@ -155,11 +156,11 @@ input{
     margin-top: 2%;
 }
   
-/* Configurando o hover do botão de calculado */
+/* Configurando o hover do botão de calcular*/
 .btn_calcular:hover {
-    /* Alterando a cor do fundo para: branco */
+    /* Alterando a cor do fundo para: amarelo */
     background-color: yellow;
-    /* Alterando a cor da fonte para: azul */
+    /* Alterando a cor da fonte para: branco */
     color: white;
     /* Aplicando efeito de amplitude no botão */
     transform: scale(1.1);
@@ -187,6 +188,7 @@ input{
     color: white;
     font-style: italic;
     font-size: 20px;
+    text-decoration: underline red;
     padding: 1rem 0 0 0;
 }
   
@@ -320,26 +322,26 @@ form input:nth-child(3) {
     opacity: 0;
     /* Aplicando um movimento no eixo X na oposição inicial de -40% */
     transform: translateY(80%);
-}
+    }
     /* Ação final da animação */
     to {
     /* Definindo opacidade em 1 para surgir a div */  
     opacity: 1;
     /* Aplicando um movimento no eixo X indo para posição 0 (posição original) */
     transform: translateY(0);
-}
+    }
 }
 
 .container-resultado {
   /* Aplicando a animação de movimento */
   animation-name: movendoCima;
   /* Tempo de execução da animação */
-  animation-duration: 500ms;
+  animation-duration: 1000ms;
   /* Delay (atraso) no tempo para executar a animação */
-  animation-delay: 250 ms;
+  animation-delay: 400 ms;
 }
 
-/* Criando responsividade do site */
+/* Criando responsividade do site: Otimizando as tags para diferentes resoluções */
 @media screen and (max-width: 1150px) {
     h1 {
         font-size: 60px;
@@ -363,7 +365,7 @@ form input:nth-child(3) {
     
     .container-resultado {
         /* Aplicando margem de distância */
-        margin: 1rem 0 0 44.5rem;
+        margin: 1rem 0 0 42rem;
     } 
 }
 
@@ -385,13 +387,16 @@ form input:nth-child(3) {
     
     .container-resultado {
         /* Aplicando margem de distância */
-        margin: 1rem 0 0 39rem;
+        margin: 1rem 0 0 37rem;
     } 
 }
 
-
 @media screen and (max-width: 960px) {
    
+header {
+    height: 60rem;
+}
+
 /* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
 .header-texto {
     text-align: center;
@@ -406,5 +411,10 @@ form input:nth-child(3) {
 .calculadora {
     margin: 0 0 0 0;
    }
+
+   .container-resultado {
+    /* Aplicando margem de distância */
+    margin: 1rem 0 0 0;
+} 
 
 }
