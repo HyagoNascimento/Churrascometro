@@ -38,7 +38,7 @@ header {
 /* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
 .header-texto {
     text-align: left;
-    margin: 4rem 0 0 5rem;
+    margin: 2rem 0 0 5rem;
 }
   
 /* Configurando a tag <h1>: tamanho, espaçamento entre letras */
@@ -71,8 +71,15 @@ h3 {
 .seta-descer {
     width: 60px;
     margin: 0 0 0 0;
+    /* Aplicando filtro para converter a cor preta do svg em branca */
     filter: invert(100%) sepia(4%) saturate(16%) hue-rotate(183deg) brightness(104%) contrast(100%);
   }
+
+/* Criando hover para o SVG */
+.seta-descer:hover {
+    /* Aplicando filtro para converter o svg em vermelho */
+    filter: invert(17%) sepia(75%) saturate(7178%) hue-rotate(358deg) brightness(95%) contrast(121%);
+}  
 
   
 /* Configurações da div calculadora: aplicando fundo transparente e centralizando os inputs e botão no card */
@@ -91,7 +98,7 @@ h3 {
     width: 300px;
     height: 350px;
     /* Aplicando distancia por margem na div da calculadora */
-    margin: 5rem 0 0 5rem;
+    margin: 2rem 0 0 5rem;
 }
 
 .titulo-cal {
@@ -318,6 +325,14 @@ form input:nth-child(3) {
 
 h1 {
     animation: movendo 500ms 150ms backwards;
+}
+
+.texto-principal {
+    animation: movendo 500ms 250ms backwards;
+}
+
+.header-texto h3 {
+    animation: movendo 500ms 350ms backwards;
 }
 
 /* Criando animação: De movimento para cima com aparição suave */
