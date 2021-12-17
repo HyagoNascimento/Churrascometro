@@ -342,53 +342,74 @@ form input:nth-child(3) {
 }
 
 /* Criando responsividade do site: Otimizando as tags para diferentes resoluções */
-@media screen and (max-width: 960px) {
-    header {
-        height: 65rem;
-    }
-    
-    /* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
-    .header-texto {
-        text-align: center;
-        margin: 2rem 0 0 0;
-    }
-           
-    .container-header {
-        display: inline;
-    }
-       
-    /* Configurações da div calculadora: aplicando fundo transparente e centralizando os inputs e botão no card */
-    .calculadora {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .container-resultado {
-        /* Aplicando margem de distância */
-        margin-left: auto;
-        margin-right: auto;
-    } 
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1600px) {
+    header {
+        height: 55rem;
+    }
+
     h1 {
-        font-size: 50px;
+        font-size: 80px;
         letter-spacing: 5px;
     }
     
     /* Configurando a tag <p> do header: */
     .texto-principal {
-        font-size: 15px;
+        font-size: 25px;
     }
       
     /* Configurando a tag <h3>: tamanho */
     h3 {
-        font-size: 15px;
+        font-size: 25px;
+    }
+    
+    /* Configurando a tag img com o svg da seta de rolagem do header */
+    .seta-descer {
+        width: 50px;
+      }  
+
+    .calculadora {
+        /* Definindo as dimensões da div login: Largura (width) e altura (height) da página. Largura (px) e a altura (px) da div dentro do login-container */ 
+        width: 400px;
+        height: 450px;
+    }  
+
+    .titulo-cal {
+        margin-top: 2rem;
+        font-size: 35px;
+    }
+
+    .subtitulo-cal {
+        font-size: 20px;
+    }
+
+    input {
+        /* Definindo espaçamento entre cada input com o margin-top de 2% */
+        margin-top: 6%;
+        /* Definindo largura em pixel do input com o width */
+        width: 320px;
+    }
+
+    .btn_calcular {
+        /* Definindo tamanho do botão com o padding */
+        padding: 20px 60px;
     }
     
     .container-resultado {
         /* Aplicando margem de distância */
-        margin: 1rem 0 0 37rem;
+        width: 400px;
+        height: 300px;
+        margin: 0 0 0 54.5rem;
     } 
+
+    .container-resultado h2 {
+        font-size: 30px;
+    }
+
+    #resultado {
+        font-size: 20px;
+    }
+
 }
 
 @media screen and (max-width: 1150px) {
@@ -417,5 +438,55 @@ form input:nth-child(3) {
         margin: 1rem 0 0 42rem;
     } 
 }
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+    
+    /* Configurando a tag <p> do header: */
+    .texto-principal {
+        font-size: 15px;
+    }
+      
+    /* Configurando a tag <h3>: tamanho */
+    h3 {
+        font-size: 15px;
+    }
+    
+    .container-resultado {
+        /* Aplicando margem de distância */
+        margin: 1rem 0 0 37rem;
+    } 
+}
+
+@media screen and (max-width: 960px) {
+   
+header {
+    height: 65rem;
+}
+
+/* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
+.header-texto {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+       
+.container-header {
+    display: inline;
+}
+   
+/* Configurações da div calculadora: aplicando fundo transparente e centralizando os inputs e botão no card */
+.calculadora {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-resultado {
+    /* Aplicando margem de distância */
+    margin-left: auto;
+    margin-right: auto;
+} 
 
 }
