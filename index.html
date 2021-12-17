@@ -8,28 +8,70 @@
     <!-- Importando o Style CSS para o projeto -->
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css"> 
 </head>
-
 <body> 
-<div> 
-  <div class="container">
-        <h1> <img id="logo" src="resources/img/logo.png"></h1>
-        <input id="adultos" name="adultos" type="number" placeholder="Adultos">
-        
-        <input id="criancas" name="criancas" type="number" placeholder="Crianças">
-       
-        <input id="duracao" name="duracao" type="number" placeholder="Duração (h)">
-  <div class="input-block">
-        <button id="botao" onclick="calcular()">Calcular</button>
-   </div> 
-        <br><br>
-        
+    <header>
+        <!-- Criando a div container responsável pela posição das divs: header-texto e calculadora -->
+        <div class="container-header">
+        <!-- Criando a div header-texto responsável pelo: Titulo do site <h1> e introdução  -->
+        <div class="header-texto">
+            <h1>Churrascômetro</h1>
+            <br>
+            <p class="texto-principal">Está pensando em fazer um churrasco?<br>Aqui você saberá exatamente a quantidade necessária para<br>fazer um bom churrasco. Calcule ao lado e abaixo você encontrá<br>opções de mercearías próximas para começar logo a festa!</p>
+            <h3>Descubra a quantidade necessária<br>dos principais itens<br>para um bom churrasco:</h3>
+            <br>
+            <a href="#sessao-compras"><img class="seta-descer" src="resources/img/seta-descer.svg" alt="Toque para rolar a tela"></a>
+        </div>
+         <!-- Criando a <div> da calculadora: O card transparente contendo toda estrutura da calculadora  -->
+        <div class="calculadora">
+            <h2 class="titulo-cal">Quanto preciso?</h2>
+            <br>
+            <p class="subtitulo-cal">Insira quantos adultos e crianças<br>irão ao churras, e quantas<br> horas durará:</p>
+            <!-- Criando o <form> para os input -->
+            <form name="#" >
+                <!-- Criando o input para solicitar o número de adultos -->
+                <input id="adultos" name="adultos" type="number" placeholder="Adultos:" >
+                <!-- Criando o input para solicitar o número de crianças --> 
+                <input id="criancas" name="criancas" type="number" placeholder="Crianças:" >
+                <!-- Criando o input para solicitar a duração do churrasco --> 
+                <input id="duracao" name="duracao" type="number" placeholder="Duração (h):" >>
+                <!-- Criando o botão de calcular  -->
+                <a class="btn_calcular" onclick="calcular()">Calcular</a>
+            </form>
+    </div>
+    </div>
+    <!-- Criando a div container-resultado responsavel pela mensagem de resultado  -->
+    <div class="container-resultado">
+        <h2>Serão necessários:</h2>
+        <br>
+          <!-- Criando a div resultado para exibir a mensagem  -->
         <div id="resultado">
 
         </div>
     </div>
-
+    </header>
+      <!-- Criando a <section> responsável por controlar as <div>, aplicando o layout e centralizando tudo -->
+    <section id="sessao-compras">
+       
     
+    </section>
+    <!-- Criando o Rodapé da página -->
+    <footer class="rodape">
+        <br>
+            <div class="rodape-container">
+                    <div>
+                        <ul class="info-rodape">
+                            <li>Front-End: HTML5 e CSS3 | Back-End: JavaScript</li>
+                        </ul>
+                    </div>
+            </div>
+            <br>
+        <!-- Linha divisória do Rodapé -->
+            <hr/>
+            <div class="rodape-container">
+                <p class="copyright">Projeto Churrascometro &copy; 2021</p>
+            </div>
+        </footer>
+    <!-- Importando o Style CSS para o projeto -->
     <script src="resources/js/script.js"></script>
 </body>
-
 </html>

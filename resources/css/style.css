@@ -1,54 +1,410 @@
+/* Importando tipografia Quicksand do Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 *{  
     margin: 0;
     padding: 0;
-    box-sizing: none;
-}
-
-body{
-    background-image: url(../img/cerveja-churrasco.jpg);
-
-}
-
-#logo{
-    width: 180px;
-    height: 162px;
-}
-
-.container{
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 300px;
-    height: 430px; 
-    margin: auto;
-    background-color: rgb(16, 17, 22);
-    padding:15px;
-    border-radius: 10px;
-
-}
-
-input{
-    width: 100%;
-    display: block;
-    padding: 5px;
     box-sizing: border-box;
-    margin-bottom: 10px;
 }
 
-h1{
+/* Configurações gerais para todas as tags do body */
+body {
+  /* Definindo a fonte (tipografia padrão do corpo da página) */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Aplicando cor branca a tag h1 e h3 */
+h1, h3 {
+  color: white;
+}
+
+/* Configurando header do site, com o tamanho */
+header {
+    /* Definindo imagem de fundo para o header */
+    background-image: url("../img/apresentacao.jpg");
+    /* Tamanho da imagem de fundo: Cobrindo o header */
+    background-size: cover;
+    position: static;
+    overflow: hidden;
+    height: 50rem;
+}
+
+/* Configurando a div contanier do texto e calculadora para flex: ficarem lado a lado  */
+.container-header {
+    display: flex;
+}
+
+/* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
+.header-texto {
+    text-align: left;
+    margin: 4rem 0 0 5rem;
+}
+  
+/* Configurando a tag <h1>: tamanho, espaçamento entre letras */
+h1 {
+    font-size: 80px;
+    font-style: italic;
+    font-family: fantasy;
+    font-weight: 500;
+    letter-spacing: 10px;
+}
+
+/* Configurando a tag <p> do header: */
+.texto-principal {
+    margin: 1rem 0 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+}
+  
+/* Configurando a tag <h3>: tamanho */
+h3 {
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 5px;
+    margin: 1rem 0 0 0;
+}
+
+/* Configurando a tag img com o svg da seta de rolagem do header */
+.seta-descer {
+    width: 60px;
+    margin: 0 0 0 0;
+    filter: invert(100%) sepia(4%) saturate(16%) hue-rotate(183deg) brightness(104%) contrast(100%);
+  }
+
+  
+/* Configurações da div calculadora: aplicando fundo transparente e centralizando os inputs e botão no card */
+.calculadora {
+    /* Definindo cor de fundo para div */  
+    background: rgba(10, 10, 10, 0.8);
+    /* Aplicando filtro de transparencia na div */  
+    backdrop-filter: blur(12.0px);
+    /* Criando sombra para div */  
+    box-shadow: 12px 12px 12px 12px rgba(20, 20, 20, 0.3);
+    /* Arredondando os cantos da div */  
+    border-radius: 30px;
+    /* Alinhando toda tag de texto dentro da div login no Centro */ 
     text-align: center;
+    /* Definindo as dimensões da div login: Largura (width) e altura (height) da página. Largura (px) e a altura (px) da div dentro do login-container */ 
+    width: 300px;
+    height: 350px;
+    justify-content: right;
+    margin: 5rem 0 0 5rem;
 }
 
-#botao{
-    width: 100px;
-    height: 50px;
-    background: #646462;
-    color: #fff;
+.titulo-cal {
+    color: white;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+
+.subtitulo-cal {
+    color: white;
+}
+  
+/* Configurando o form */
+form {
+    /* Definindo o display do form como flex para utilizar o layout flexível */
+    display: flex;
+    /* Deixando os elementos internos alinhados na vertical */  
+    align-items: center;
+    /* Definindo a disposição do elementos internos no centro da linha */
+    justify-content: center;
+    /* Definindo os input em baixo do outro */
+    flex-direction: column;
+}
+  
+input{
+    /* Definindo cor de fundo do input*/
+    background: rgba(80, 80, 80, 0.3);
+    /* Tirando a bordar do input */
     border: none;
-    border-radius: 6px;
-    margin-left: 35%;
-    cursor: pointer;
+    /* Arredondando os cantos do input */
+    border-radius: 10px;
+    /* Definindo espaçamento entre cada input com o margin-top de 2% */
+    margin-top: 5%;
+    /* Definindo cor branca para o input */
+    color: white;
+   /* Definindo o tamanho do padding entre o placeholder e o input aplicando o padding: top (superior); right(direita) */
+    padding: 8px 20px;
+    /* Definindo o tamanho da largura do input */
+    width: 220px;
+}
+  
+/* Configurando o botão de calculado */
+.btn_calcular {
+    /* Definindo o tamanho do botão aplicando o padding: top (superior); right(direita) */
+    padding: 10px 50px;
+    /* Definindo cor de fundo do botão */
+    background-color: red;
+    /* Definindo cor da fonte do botão */
+    color: white;
+    /* Tirando a borda do botão */
+    border: none;
+    /* Definindo arredondamento do botão */
+    border-radius: 5px;
+    /* Tamanho da fonte */
+    font-size: 15px;
+    /* Transformando o texto do botão */
+    text-transform: uppercase;
+    /* Definindo espessura da fonte */
+    font-weight: 700;
+    /* Aplicando margem superior de distância do botão ao form */
+    margin-top: 2%;
+}
+  
+/* Configurando o hover do botão de calculado */
+.btn_calcular:hover {
+    /* Alterando a cor do fundo para: branco */
+    background-color: yellow;
+    /* Alterando a cor da fonte para: azul */
+    color: white;
+    /* Aplicando efeito de amplitude no botão */
+    transform: scale(1.1);
 }
 
-#resultado{
+.container-resultado {
+    /* Definindo cor de fundo para div */  
+    background: rgba(10, 10, 10, 0.8);
+    /* Aplicando filtro de transparencia na div */  
+    backdrop-filter: blur(12.0px);
+    /* Criando sombra para div */  
+    box-shadow: 12px 12px 12px 12px rgba(20, 20, 20, 0.3);
+    /* Arredondando os cantos da div */  
+    border-radius: 30px;
+    /* Alinhando toda tag de texto dentro da div resultado no Centro */ 
     text-align: center;
-    color:white;
+    /* Definindo as dimensões da div resultado: Largura (width) e altura (height) da página. Largura (px) e a altura (px) da div dentro do container-resultado */ 
+    width: 300px;
+    height: 200px;
+    /* Aplicando margem de distância */
+    margin: 0 0 0 52.5rem;
+} 
+
+.container-resultado h2 {
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    padding: 1rem 0 0 0;
+}
+  
+#resultado {
+    text-align: justify;
+    color:white; 
+    margin: 0 0 0 20%; 
+}
+
+/* Configurações da session container compras: aplicando layout e centralizando */
+#sessao-compras {
+    background-color: red;
+    text-align: center;
+    color: white;
+    height: 600px;
+    display: flex;
+}
+
+/* Configurações do rodapé  */
+.rodape {
+	background-color: rgb(34, 34, 34);
+    height: 10rem;
+    font-size: 20px;
+	color: white;
+    text-align: center;
+}
+
+/* Configuração do rodapé */
+.rodape-container {
+  padding-top: 1rem;
+}
+
+/* Definição da linha divisoria do rodapé */
+hr {
+	width: 50%;
+    opacity: 50%;
+    color: white;
+	margin: 0 auto 0 auto; 
+}
+
+/* Configuração da classe do copyright  */
+.copyright {
+	margin: 0;
+	color: white;
+	font-style: oblique;
+	font-size: 15px;
+}
+
+/* Criando animações utilizando o CSS3 Animation */
+
+/* Criando animação: Aparição suave */
+@keyframes fade {
+  /* Ação inicial da animação */
+  from {
+    /* Definindo opacidade em 0 para sumir a div */  
+    opacity: 0;
+  }
+  /* Ação final da animação */
+  to {
+    /* Definindo opacidade em 1 para surgir a div */  
+    opacity: 1;
+  }
+}
+
+/* Aparição do form suavemente */
+/* Onde a animação será aplicada */
+.calculadora {
+  /* Aplicando a animação fade */
+  animation-name: fade;
+  /* Tempo de execução da animação */
+  animation-duration: 900ms;
+}
+
+/* Criando animação: De movimento com aparição suave */
+@keyframes movendo{
+    /* Ação inicial da animação */
+    from {
+        /* Definindo opacidade em 0 para sumir a div */  
+        opacity: 0;
+        /* Aplicando um movimento no eixo X na oposição inicial de -40% */
+        transform: translateX(-50%);
+    }
+    /* Ação final da animação */
+    to {
+         /* Definindo opacidade em 1 para surgir a div */  
+        opacity: 1;
+        /* Aplicando um movimento no eixo X indo para posição 0 (posição original) */
+        transform: translateX(0);
+    }
+}
+
+/* Controlando a animação no primeiro input */  
+form input:nth-child(1) {
+  /* Aplicando a animação de movimento */
+  animation-name: movendo;
+  /* Tempo de execução da animação */
+  animation-duration: 500ms;
+  /* Delay (atraso) no tempo para executar a animação */
+  animation-delay: 250 ms;
+}
+
+/* Controlando a animação no segundo input */  
+form input:nth-child(2) {
+  /* Aplicando a animação de movimento */
+  animation-name: movendo;
+  /* Tempo de execução da animação */
+  animation-duration: 500ms;
+  /* Delay (atraso) no tempo para executar a animação */
+  animation-delay: 500 ms;
+  /* O input só irá aparecer após o delay */
+  animation-fill-mode: backwards;
+}
+
+/* Controlando a animação no segundo input */  
+form input:nth-child(3) {
+    /* Aplicando a animação de movimento */
+    animation-name: movendo;
+    /* Tempo de execução da animação */
+    animation-duration: 500ms;
+    /* Delay (atraso) no tempo para executar a animação */
+    animation-delay: 750 ms;
+    /* O input só irá aparecer após o delay */
+    animation-fill-mode: backwards;
+}
+
+/* Criando animação: De movimento para cima com aparição suave */
+@keyframes movendoCima {
+    /* Ação inicial da animação */
+    from {
+    /* Definindo opacidade em 0 para sumir a div */  
+    opacity: 0;
+    /* Aplicando um movimento no eixo X na oposição inicial de -40% */
+    transform: translateY(80%);
+}
+    /* Ação final da animação */
+    to {
+    /* Definindo opacidade em 1 para surgir a div */  
+    opacity: 1;
+    /* Aplicando um movimento no eixo X indo para posição 0 (posição original) */
+    transform: translateY(0);
+}
+}
+
+.container-resultado {
+  /* Aplicando a animação de movimento */
+  animation-name: movendoCima;
+  /* Tempo de execução da animação */
+  animation-duration: 500ms;
+  /* Delay (atraso) no tempo para executar a animação */
+  animation-delay: 250 ms;
+}
+
+/* Criando responsividade do site */
+@media screen and (max-width: 1150px) {
+    h1 {
+        font-size: 60px;
+        letter-spacing: 5px;
+    }
+    
+    /* Configurando a tag <p> do header: */
+    .texto-principal {
+        font-size: 18px;
+    }
+      
+    /* Configurando a tag <h3>: tamanho */
+    h3 {
+        font-size: 18px;
+    }
+    
+    /* Configurando a tag img com o svg da seta de rolagem do header */
+    .seta-descer {
+        width: 40px;
+      }  
+    
+    .container-resultado {
+        /* Aplicando margem de distância */
+        margin: 1rem 0 0 44.5rem;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+    
+    /* Configurando a tag <p> do header: */
+    .texto-principal {
+        font-size: 15px;
+    }
+      
+    /* Configurando a tag <h3>: tamanho */
+    h3 {
+        font-size: 15px;
+    }
+    
+    .container-resultado {
+        /* Aplicando margem de distância */
+        margin: 1rem 0 0 39rem;
+    } 
+}
+
+
+@media screen and (max-width: 960px) {
+   
+/* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
+.header-texto {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+       
+.container-header {
+    display: inline;
+   }
+   
+/* Configurações da div calculadora: aplicando fundo transparente e centralizando os inputs e botão no card */
+.calculadora {
+    margin: 0 0 0 0;
+   }
+
 }
