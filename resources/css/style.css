@@ -462,8 +462,7 @@ form input:nth-child(3) {
 }
 
 @media screen and (max-width: 960px) {
-   
-header {
+    header {
     height: 65rem;
 }
 
