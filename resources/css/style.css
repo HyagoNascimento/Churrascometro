@@ -344,7 +344,6 @@ form input:nth-child(3) {
 /* Criando responsividade do site: Otimizando as tags para diferentes resoluções */
 
 @media screen and (max-width: 960px) {
-   
     header {
         height: 65rem;
     }
