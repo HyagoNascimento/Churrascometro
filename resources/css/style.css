@@ -342,6 +342,57 @@ form input:nth-child(3) {
 }
 
 /* Criando responsividade do site: Otimizando as tags para diferentes resoluções */
+
+@media screen and (max-width: 960px) {
+   
+    header {
+        height: 65rem;
+    }
+    
+    /* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
+    .header-texto {
+        text-align: center;
+        margin: 2rem 0 0 0;
+    }
+           
+    .container-header {
+        display: inline;
+    }
+       
+    /* Configurações da div calculadora: aplicando fundo transparente e centralizando os inputs e botão no card */
+    .calculadora {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .container-resultado {
+        /* Aplicando margem de distância */
+        margin-left: auto;
+        margin-right: auto;
+    } 
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+    
+    /* Configurando a tag <p> do header: */
+    .texto-principal {
+        font-size: 15px;
+    }
+      
+    /* Configurando a tag <h3>: tamanho */
+    h3 {
+        font-size: 15px;
+    }
+    
+    .container-resultado {
+        /* Aplicando margem de distância */
+        margin: 1rem 0 0 37rem;
+    } 
+}
+
 @media screen and (max-width: 1150px) {
     h1 {
         font-size: 60px;
@@ -368,53 +419,5 @@ form input:nth-child(3) {
         margin: 1rem 0 0 42rem;
     } 
 }
-
-@media screen and (max-width: 1024px) {
-    h1 {
-        font-size: 50px;
-        letter-spacing: 5px;
-    }
-    
-    /* Configurando a tag <p> do header: */
-    .texto-principal {
-        font-size: 15px;
-    }
-      
-    /* Configurando a tag <h3>: tamanho */
-    h3 {
-        font-size: 15px;
-    }
-    
-    .container-resultado {
-        /* Aplicando margem de distância */
-        margin: 1rem 0 0 37rem;
-    } 
-}
-
-@media screen and (max-width: 960px) {
-   
-header {
-    height: 60rem;
-}
-
-/* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
-.header-texto {
-    text-align: center;
-    margin: 2rem 0 0 0;
-}
-       
-.container-header {
-    display: inline;
-   }
-   
-/* Configurações da div calculadora: aplicando fundo transparente e centralizando os inputs e botão no card */
-.calculadora {
-    margin: 0 0 0 0;
-   }
-
-   .container-resultado {
-    /* Aplicando margem de distância */
-    margin: 1rem 0 0 0;
-} 
 
 }
