@@ -499,6 +499,16 @@ h1 {
     height: 65rem;
 }
 
+h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+/* Configurando a tag <h3>: tamanho */
+h3 {
+    font-size: 12px;
+}
+
 /* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
 .header-texto {
     text-align: center;
