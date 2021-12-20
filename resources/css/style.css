@@ -500,13 +500,13 @@ h1 {
 }
 
 h1 {
-    font-size: 40px;
-    letter-spacing: 4px;
+    font-size: 35px;
+    letter-spacing: 2px;
 }
 
 /* Configurando a tag <h3>: tamanho */
 h3 {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 /* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
