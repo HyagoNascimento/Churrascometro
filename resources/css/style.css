@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Aplicando rolagem suave */
+    scroll-behavior: smooth;
+}
+
 /* Configurações gerais para todas as tags do body */
 body {
   /* Definindo a fonte (tipografia padrão do corpo da página) */
@@ -627,7 +632,7 @@ h3 {
 /* Configurações da sessão devs: display inline (em linha, em baixo do outro) */
 #sessao-devs {
     display: block;
-    height: 60rem;
+    height: 50rem;
 }
 
 .front-dev {
@@ -636,7 +641,7 @@ h3 {
     margin-right: auto;
   
 }
-
+}
 
 @media screen and (max-width: 500px) {
 
@@ -655,6 +660,8 @@ h3 {
     height: 180px;
     border-radius: 60px;
 }
-}
 
+.rodape {
+    font-size: 15px;
+}
 }
