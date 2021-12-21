@@ -1,5 +1,7 @@
 /* Importando tipografia Quicksand do Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* Importando tipografia Bebas do Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 *{  
     margin: 0;
@@ -11,6 +13,7 @@
 body {
   /* Definindo a fonte (tipografia padrão do corpo da página) */
   font-family: 'Quicksand', sans-serif;
+  background-color: red;
 }
 
 /* Aplicando cor branca a tag h1 e h3 */
@@ -45,7 +48,7 @@ header {
 h1 {
     font-size: 80px;
     font-style: italic;
-    font-family: Impact, fantasy;
+    font-family: 'Bebas Neue', cursive;
     font-weight: 500;
     letter-spacing: 10px;
 }
@@ -190,7 +193,7 @@ input{
     width: 300px;
     height: 200px;
     /* Aplicando margem de distância */
-    margin: 0 0 0 52.5rem;
+    margin: 0 0 0 47rem;
 } 
 
 .container-resultado h2 {
@@ -207,13 +210,76 @@ input{
     margin: 0 0 0 20%; 
 }
 
-/* Configurações da session container compras: aplicando layout e centralizando */
-#sessao-compras {
+/* Configurações da session container info: aplicando layout e centralizando */
+#sessao-info {
     background-color: red;
     text-align: center;
     color: white;
     height: 600px;
     display: flex;
+}
+
+/* Configurações da div compre e iframe: Para dividir (50%) ao meio a sessao info */
+.compre, .iframe-spotify {
+    margin-top: 2%;
+    width: 50%;
+}
+
+.lojas-online {
+    display: grid;
+    justify-content: center;
+}
+
+.logo-ifood, .logo-ze {
+    width: 180px;
+    height: 180px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Svg da onda */
+.onda-recorte {
+    width: 100%;
+    margin-bottom: -3%;
+}
+
+/* Configurações da session container devs: aplicando layout e centralizando | div dos desenvolvedores */
+#sessao-devs {
+    background-color: #ff7f00;
+    display: flex;
+    text-align: center;
+    height: 40rem;
+    color: white;
+}
+
+.front-dev{
+    width: 50%;
+    margin-top: 2%;
+}
+
+.front-dev p {
+    font-style: italic;
+}
+
+/* Configurando as imagens de perfil: definindo tamanho e arredondamento */
+.perfil-felipe, .perfil-hyago {
+    width: 240px;
+    height: 240px;
+    border-radius: 80px;
+}
+
+/* Configurando icones importados do Font Awesome  */
+.fa-github, .fa-linkedin-in {
+    font-size: 40px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* Hover dos icones */
+.fa-github:hover, .fa-linkedin-in:hover {
+    color: red;
+    transform: scale(1.5);
 }
 
 /* Configurações do rodapé  */
@@ -223,6 +289,7 @@ input{
     font-size: 20px;
 	color: white;
     text-align: center;
+    flex-shrink: 0;
 }
 
 /* Configuração do rodapé */
@@ -335,6 +402,11 @@ h1 {
     animation: movendo 500ms 350ms backwards;
 }
 
+/* Aplicando animação: De movimento para o hover das logos */
+.logo-ifood:hover, .logo-ze:hover {
+    animation: movendo 800ms 80ms;
+}
+
 /* Criando animação: De movimento para cima com aparição suave */
 @keyframes movendoCima {
     /* Ação inicial da animação */
@@ -359,7 +431,7 @@ h1 {
 }
 
 .container-resultado {
-  /* Aplicando a animação de movimento */
+  /* Aplicando a animação de movimento para cima suave */
   animation-name: movendoCima;
   /* Tempo de execução da animação */
   animation-duration: 1000ms;
@@ -374,11 +446,15 @@ h1 {
     animation: movendoCima 500ms 200ms backwards;
 }
 
-/* Criando responsividade do site: Otimizando as tags para diferentes resoluções */
+/* Aplicando a animação de movimento para cima suave nas div: compre e iframe-spotify */
+.compre, .iframe-spotify {
+    animation: movendoCima 1000ms 600ms backwards;
+}
 
-@media screen and (min-width: 1600px) {
+/* Criando responsividade do site: Otimizando as tags para diferentes resoluções */
+@media screen and (min-width: 1920px) {
     header {
-        height: 55rem;
+        height: 60rem;
     }
 
     h1 {
@@ -500,13 +576,13 @@ header {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 45px;
     letter-spacing: 2px;
 }
 
 /* Configurando a tag <h3>: tamanho */
 h3 {
-    font-size: 10px;
+    font-size: 15px;
 }
 
 /* Configurações da div responsável pela apresentação inicial do site, contendo as tag H1, p. com pocisionamento e alinhamento */
@@ -530,5 +606,57 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 } 
+
+/* Configurações da sessão info: lojas e spotify: display inline (em linha, em baixo do outro) */
+#sessao-info {
+    display: inline;
+}
+
+.compre {
+    /* Aplicando margem de distância */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iframe-spotify {
+    /* Aplicando margem de distância */
+    margin-left: auto;
+    margin-right: auto;
+    /* Definindo largura total da div do iframe */
+    width: 80%;
+}
+
+/* Configurações da sessão devs: display inline (em linha, em baixo do outro) */
+#sessao-devs {
+    display: block;
+    height: 60rem;
+}
+
+.front-dev {
+    /* Aplicando margem de distância */
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+
+@media screen and (max-width: 500px) {
+
+.iframe-spotify {
+      /* Definindo largura total da div do iframe */
+    width: 80%;
+}
+    
+/* Svg da onda */
+.onda-recorte {
+    margin-bottom: -5%;
+}
+
+.perfil-felipe, .perfil-hyago {
+    width: 180px;
+    height: 180px;
+    border-radius: 60px;
+}
+}
 
 }

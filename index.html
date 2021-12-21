@@ -7,6 +7,8 @@
     <title>Churrascometro</title>
     <!-- Importando o Style CSS para o projeto -->
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css"> 
+     <!-- Importando icones do font Awesome para o projeto -->
+    <script src="https://kit.fontawesome.com/3b7e70bcc5.js" crossorigin="anonymous"></script>
 </head>
 <body> 
     <header>
@@ -19,25 +21,27 @@
             <p class="texto-principal">Está pensando em fazer um churrasco?<br>Aqui você saberá exatamente a quantidade necessária para<br>fazer um bom churrasco. Utilize nossa calculadora<br> especial ao lado | na sessão abaixo você encontrá<br>opções de mercearías próximas para começar logo a festa!</p>
             <h3>Descubra a quantidade necessária<br>dos principais itens<br>para um bom churrasco:</h3>
             <br>
-            <a href="#sessao-compras"><img class="seta-descer" src="resources/img/seta-descer.svg" alt="Toque para rolar a tela"></a>
+            <a href="#sessao-info"><img class="seta-descer" src="resources/img/seta-descer.svg" alt="Toque para rolar a tela"></a>
         </div>
          <!-- Criando a <div> da calculadora: O card transparente contendo toda estrutura da calculadora  -->
-        <div class="calculadora">
-            <h2 class="titulo-cal">Quanto preciso?</h2>
-            <br>
-            <p class="subtitulo-cal">Insira quantos adultos e crianças<br>irão ao churras, e quantas<br> horas durará:</p>
-            <!-- Criando o <form> para os input -->
-            <form name="#" >
-                <!-- Criando o input para solicitar o número de adultos -->
-                <input id="adultos" name="adultos" type="number" placeholder="Adultos:" >
-                <!-- Criando o input para solicitar o número de crianças --> 
-                <input id="criancas" name="criancas" type="number" placeholder="Crianças:" >
-                <!-- Criando o input para solicitar a duração do churrasco --> 
-                <input id="duracao" name="duracao" type="number" placeholder="Duração (h):" >>
-                <!-- Criando o botão de calcular  -->
-                <a class="btn_calcular" onclick="calcular()">Calcular</a>
-            </form>
-    </div>
+        <div class="div-calculadora">
+            <div class="calculadora">
+                <h2 class="titulo-cal">Quanto preciso?</h2>
+                <br>
+                <p class="subtitulo-cal">Insira quantos adultos e crianças<br>irão ao churras, e quantas<br> horas durará:</p>
+                <!-- Criando o <form> para os input -->
+                <form name="#" >
+                    <!-- Criando o input para solicitar o número de adultos -->
+                    <input id="adultos" name="adultos" type="number" placeholder="Adultos:" >
+                    <!-- Criando o input para solicitar o número de crianças --> 
+                    <input id="criancas" name="criancas" type="number" placeholder="Crianças:" >
+                    <!-- Criando o input para solicitar a duração do churrasco --> 
+                    <input id="duracao" name="duracao" type="number" placeholder="Duração (h):" >>
+                    <!-- Criando o botão de calcular  -->
+                    <a class="btn_calcular" onclick="calcular()">Calcular</a>
+                </form>
+        </div>
+        </div>     
     </div>
     <!-- Criando a div container-resultado responsavel pela mensagem de resultado  -->
     <div class="container-resultado">
@@ -50,9 +54,55 @@
     </div>
     </header>
       <!-- Criando a <section> responsável por controlar as <div>, aplicando o layout e centralizando tudo -->
-    <section id="sessao-compras">
-       
-    
+    <section id="sessao-info">
+        <div class="compre">
+            <br>
+            <h2>Ainda não fez suas compras?</h2>
+            <p>Acesse as plataformas abaixo e faça já suas compras!</p>
+            <br>
+            <div class="lojas-online">
+               <a href="https://www.ifood.com.br/" target="_black" ><img class="logo-ifood" src="resources/img/ifood.jpg" alt="Ifood - Logotipo" /></a>
+                <br>
+                <a href="https://www.ze.delivery/" target="_black" ><img class="logo-ze"  src="resources/img/ze-delivery.png" alt="Zé Delivery - Logotipo" /></a>
+            </div>
+        </div>
+        <div class="iframe-spotify">
+            <br>
+            <h2>Não sabe o que ouvir?</h2>
+            <p>Confira essa playlist super animada para tornar o seu churrasco memorável.</p>
+            <br>
+            <!-- API / Iframe do Spotify com playlist de música para churrasco -->
+            <iframe src="https://open.spotify.com/embed/playlist/5ogiEGyR1tKGX1EtjxqnH3?utm_source=generator&theme=0" width="95%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </section>
+    <!-- SVG de recorte de onda -->
+        <svg class="onda-recorte" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff7f00" fill-opacity="1" d="M0,64L40,80C80,96,160,128,240,149.3C320,171,400,181,480,154.7C560,128,640,64,720,37.3C800,11,880,21,960,64C1040,107,1120,181,1200,213.3C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    <!-- Sessão de desenvolvedor -->
+    <section id="sessao-devs">
+        <div class="front-dev">
+            <h2>Desenvolvedor</h2>
+            <br>
+            <img class="perfil-felipe" src="resources/img/felipe-perfil.jpg" alt="Felipe Barreto" />
+            <br>
+            <p>Carlos Felipe Barreto | Redes Sociais: </p>
+            <div class="redes-sociais">
+               <a href="https://github.com/felipecarvalhobarr" target="_black"><i class="fab fa-github"></i></a> 
+               <a href="https://www.linkedin.com/in/felipecarvbarr/" target="_black"><i class="fab fa-linkedin-in"></i></a> 
+            </div>
+        </div>
+        <br>
+        <div class="front-dev">
+            <h2>Desenvolvedor</h2>
+            <br>
+            <img class="perfil-hyago" src="resources/img/hyago-perfil.jpg" alt="Hyago Nascimento" />
+            <br>
+            <p>Hyago Nascimento | Redes Sociais: </p>
+            <div class="redes-sociais">
+              <a href="https://github.com/HyagoNascimento" target="_black"><i class="fab fa-github"></i></a>  
+              <a href="https://www.linkedin.com/in/hyago-nascimento-55a3a321b/" target="_black"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <br>
     </section>
     <!-- Criando o Rodapé da página -->
     <footer class="rodape">
