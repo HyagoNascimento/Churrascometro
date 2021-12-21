@@ -135,7 +135,7 @@ input{
     /* Arredondando os cantos do input */
     border-radius: 10px;
     /* Definindo espaçamento entre cada input com o margin-top de 2% */
-    margin-top: 5%;
+    margin-top: 4%;
     /* Definindo cor branca para o input */
     color: white;
    /* Definindo o tamanho do padding entre o placeholder e o input aplicando o padding: top (superior); right(direita) */
@@ -162,8 +162,6 @@ input{
     text-transform: uppercase;
     /* Definindo espessura da fonte */
     font-weight: 700;
-    /* Aplicando margem superior de distância do botão ao form */
-    margin-top: 2%;
     /* Mudando o cursor para clicar */
     cursor: pointer;
 }
