@@ -1,4 +1,4 @@
-<h1 align="center">Churrascometro</h1>
+<h1 align="center">Churrascometro :fork_and_knife::beer:</h1>
 <br>
 <div align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" target=_blank></a>
